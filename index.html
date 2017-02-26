@@ -53,40 +53,34 @@
       <h1 class="search-title">Flickr Search</h1>
       <ul id="images">
         <!-- TODO: Replace the content in this area with a grid of images based on the results of the search. -->
+        
+        <!--Pattern HTML-->
+  
+	<!--End Pattern HTML-->
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Image Grid</h1>
+			<p>A list of images that by default is two-columns. As screen real estate becomes available, more columns are added.</p>
+			<h2>Considerations</h2>
+			<ul>
+				<li>Assume small screen by default. Add columns as necessary.</li>
+			</ul>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="http://bradfrost.github.com/this-is-responsive/patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
         <li class="placeholder">Search for images using the search bar above!</li>
       </ul>
 
       <hr>
 
       <footer>
-        <p>&copy; Jane Student 2015</p>
+        <p>&copy; Jamila Youngblood 2017</p>
       </footer>
     </div> <!-- /container -->
-
-    <!-- Modal Window used for displaying content-->
-    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="infoModalLabel">Loading...</h4>
-          </div>
-          <div class="modal-body">
-            Loading...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
-    <script src="js/vendor/bootstrap.min.js"></script>
-
-    <script src="js/main.js"></script>
-
-    </body>
-</html>
