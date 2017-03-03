@@ -10,20 +10,21 @@
 });
 $(document).on('ready', function(){
   var searchImages = function(tags) {
-    var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+      var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
     console.log(tags);
     $('#images').innerHTML = '<li class="search-throbber">Searching...</li>';  // Flickr reveal  a searchable JSON Feed you can access via jQuery's $.getJSON()
-    $.getJSON( flickrAPI, {
+    $.getJSON(flickrAPI, {
       tags: tags,
       tagmode: "any"
-   // image search results//
+   // image search results
       format: "json"
     }).done(function( data ) {
       $('#images').empty();
+      // empties image container
       $('h1.search-title').first()[0].innerHTML = "Search for: " + tags;
       $.each( data.items, function( i, item ) {
         var newListItem = $("<li>")
-        // If you're not doing the modal, then show info about the image.
+     // image information
         var newTitle = $('<p class="image-title">').html(item.title).appendTo(newListItem);
         var newDate = $('<p class="image-date">').text(item.date_taken).appendTo(newListItem);
         var newDescription = $('<p class="image-description">').html(item.description).appendTo(newListItem);
