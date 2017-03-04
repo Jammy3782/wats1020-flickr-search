@@ -19,7 +19,7 @@ $(document).on('ready', function(){
       tagmode: "any", 
    // image search results
       format: "json"
-    .done(function( data ){
+    }).done(function( data ) {
       $('#images').empty();
       // empties image container
       $('h1.search-title').first()[0].innerHTML = "Search for: " + tags;
